@@ -1,0 +1,10 @@
+{ pkgs, config, ... }: {
+  home.packages = with pkgs; [ hyprpaper ];
+
+  xdg.configFile."hypr/hyprpaper.conf".text = ''
+    preload = ~/.config/wallpapers/wallp.png
+    wallpaper = ,~/.config/wallpapers/wallp.png
+    ipc=true
+    splash=false
+  '';
+}
